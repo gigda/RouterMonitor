@@ -77,15 +77,15 @@ public class MainActivity extends Activity {
         LinearLayout card = card();
         LinearLayout totals = new LinearLayout(this);
         totals.setOrientation(LinearLayout.HORIZONTAL);
-        totalDown = bigNumber("#1565C0");
-        totalUp = bigNumber("#2E7D32");
+        totalDown = bigNumber("#006994");
+        totalUp = bigNumber("#006994");
         totals.addView(column("הורדה ↓", totalDown), new LinearLayout.LayoutParams(0, -2, 1));
         totals.addView(column("העלאה ↑", totalUp), new LinearLayout.LayoutParams(0, -2, 1));
         card.addView(totals);
-        countText = text(15, "#333333", true);
+        countText = text(15, "#006994", true);
         countText.setPadding(0, dp(8), 0, 0);
         card.addView(countText);
-        statusText = text(12, "#777777", false);
+        statusText = text(12, "#006994", false);
         card.addView(statusText);
         root.addView(card);
 
@@ -211,7 +211,7 @@ public class MainActivity extends Activity {
                     devicesTime = System.currentTimeMillis();
                 }
                 updateRates(ft);
-                statusText.setTextColor(Color.parseColor("#777777"));
+                statusText.setTextColor(Color.parseColor("#006994"));
                 String time = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
                 statusText.setText(trafficAvailable
                         ? "עודכן " + time
@@ -281,10 +281,10 @@ public class MainActivity extends Activity {
 
         LinearLayout left = new LinearLayout(this);
         left.setOrientation(LinearLayout.VERTICAL);
-        TextView name = text(16, "#111111", true);
+        TextView name = text(16, "#006994", true);
         name.setText(nameOf(mac));
         left.addView(name);
-        TextView sub = text(12, "#777777", false);
+        TextView sub = text(12, "#006994", false);
         sub.setText((d != null && !d.ip.isEmpty() ? d.ip + " · " : "") + connection(d));
         sub.setTextDirection(View.TEXT_DIRECTION_RTL);
         left.addView(sub);
@@ -293,9 +293,9 @@ public class MainActivity extends Activity {
         LinearLayout right = new LinearLayout(this);
         right.setOrientation(LinearLayout.VERTICAL);
         right.setGravity(Gravity.END);
-        TextView dn = text(14, "#1565C0", r != null && r[0] > 1_000_000);
+        TextView dn = text(14, "#006994", r != null && r[0] > 1_000_000);
         dn.setText("↓ " + (r == null ? "—" : formatRate(r[0])));
-        TextView upv = text(14, "#2E7D32", r != null && r[1] > 1_000_000);
+        TextView upv = text(14, "#006994", r != null && r[1] > 1_000_000);
         upv.setText("↑ " + (r == null ? "—" : formatRate(r[1])));
         right.addView(dn);
         right.addView(upv);
@@ -375,7 +375,7 @@ public class MainActivity extends Activity {
     private LinearLayout column(String label, TextView value) {
         LinearLayout c = new LinearLayout(this);
         c.setOrientation(LinearLayout.VERTICAL);
-        TextView l = text(13, "#555555", false);
+        TextView l = text(13, "#006994", false);
         l.setText(label);
         c.addView(l);
         c.addView(value);

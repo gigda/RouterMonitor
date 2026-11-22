@@ -41,6 +41,7 @@ public class SettingsActivity extends Activity {
 
         TextView note = new TextView(this);
         note.setText("אלה פרטי הכניסה לממשק הניהול של הראוטר (אותם פרטים של אפליקציית ASUS Router). הם נשמרים רק בטלפון הזה.");
+        note.setTextColor(android.graphics.Color.parseColor("#006994"));
         note.setPadding(0, dp(12), 0, dp(12));
         root.addView(note);
 
@@ -84,12 +85,14 @@ public class SettingsActivity extends Activity {
     private EditText field(LinearLayout root, String label, String value, int type) {
         TextView l = new TextView(this);
         l.setText(label);
+        l.setTextColor(android.graphics.Color.parseColor("#006994"));
         l.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
         l.setPadding(0, dp(10), 0, 0);
         root.addView(l);
         EditText e = new EditText(this);
         e.setInputType(type);
         e.setText(value);
+        e.setTextColor(android.graphics.Color.parseColor("#006994"));
         e.setSingleLine(true);
         e.setTextDirection(View.TEXT_DIRECTION_LTR);
         root.addView(e);
