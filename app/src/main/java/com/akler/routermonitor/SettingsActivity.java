@@ -50,6 +50,7 @@ public class SettingsActivity extends Activity {
         root.addView(save);
 
         ScrollView sv = new ScrollView(this);
+        sv.setBackgroundColor(android.graphics.Color.parseColor("#87CEEB"));
         sv.addView(root);
         setContentView(sv);
     }
